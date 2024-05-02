@@ -21,7 +21,6 @@ setInterval(() => {
     .catch(error => {
       console.log("err : " +error);
     }) 
-    // console.log(global.BTCprices);
 }, 2000);
 
 let mailOptions = {

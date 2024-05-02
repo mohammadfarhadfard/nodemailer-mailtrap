@@ -50,4 +50,3 @@ setTimeout(() => {
     });
     }
 }, 4000);
-//<b>Hey there! </b><br> <p>the price of btc more than 56000</p><br /><img src="cid:uniq-mailtrap2.png" alt="mailtrap" style="max-width:100%" />

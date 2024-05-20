@@ -21,7 +21,7 @@ setInterval(() => {
     .catch(error => {
       console.log("err : " +error);
     }) 
-}, 2000);
+}, 2500);
 
 let mailOptions = {
   from: '<sajad3@gamil.com>',
@@ -40,7 +40,7 @@ let mailOptions = {
 
 
 setTimeout(() => {
-  if(global.BTCprices > '56000' ){
+  if(global.BTCprices > '60000' ){
     transport.sendMail(mailOptions, (error, info) => {
       if (error) {
         return console.log(error);
@@ -48,4 +48,4 @@ setTimeout(() => {
       console.log('Message sent: %s', info.messageId);
     });
     }
-}, 4000);
+}, 5000);

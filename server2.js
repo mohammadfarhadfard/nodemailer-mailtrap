@@ -2,6 +2,7 @@ let nodemailer = require('nodemailer');
 require('dotenv').config()
 const axios = require('axios')
 const { htmlVar } = require('./html')
+const { pool } = require('./dbConfig')
 
 let transport = nodemailer.createTransport({
   host: "sandbox.smtp.mailtrap.io",
@@ -38,9 +39,19 @@ let mailOptions = {
   ]
 };
 
+let price = [];
 
 setTimeout(() => {
-  if(global.BTCprices > '60000' ){
+
+  pool.query(
+    `SELECT * FROM btc_price` , price , (err,results) =>{
+      if (err) throw err;
+      price.push(price)
+      // console.log(results.rows);
+    }
+  )
+
+  if(global.BTCprices > price ){
     transport.sendMail(mailOptions, (error, info) => {
       if (error) {
         return console.log(error);

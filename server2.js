@@ -22,6 +22,13 @@ setInterval(() => {
     .catch(error => {
       console.log("err : " +error);
     }) 
+
+    pool.query(
+      `UPDATE btc_price SET online_price = $1`,[global.BTCprices],(error,result) => {
+        if (error) throw error;
+        // console.log('updated');
+      }
+    )
 }, 2500);
 
 let mailOptions = {

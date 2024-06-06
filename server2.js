@@ -35,7 +35,7 @@ let mailOptions = {
   from: '<sajad3@gamil.com>',
   to: 'mohammad2@gamil.com',
   subject: 'Nice Nodemailer test',
-  text: 'Hey the price of btc more than 56000',
+  text: 'Hey the price of btc more than 60000',
   html: htmlVar,
   attachments: [
     {
